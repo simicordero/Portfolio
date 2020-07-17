@@ -25,7 +25,6 @@ h2{
     font-weight: bold;
     font-size: 24px;
     margin-bottom: 40px;
-    margin-left: ;
 }
 
 /*
@@ -41,6 +40,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .hero-image{
@@ -61,6 +61,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .project-course {
@@ -90,11 +91,15 @@ ul {
 }
 
 .project-details {
-    width: 500px;
+    width: 50%;
 }
 
 .project-imageContainer {
-    width: 500px;
+    width: 50%;
+}
+
+.project-imageContainer img {
+    max-width: 100%;
 }
 
 .header {
@@ -104,6 +109,7 @@ ul {
     justify-content: space-between;
     height: 70px;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .header ul {
@@ -160,11 +166,8 @@ figure {
     color: white;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-}
-
-.footer img {
-    vertical-align: middle;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .footer a {
@@ -175,12 +178,12 @@ figure {
     flex-wrap: wrap;
 }
 .event-list-title{
-    margin-left: 200px;
+    width: 100%;
+    margin-left: 1em;
 }
 .event {
-    border: 1px solid red;
-    margin: 10px;
-    width: 470px;
+    margin: 1%;
+    width: 48%;
     border-radius: 10px;
     overflow: hidden;
     flex-shrink: 0;
@@ -221,10 +224,7 @@ figure {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-}
-
-.social {
+    flex-wrap: wrap;
 
 }
 
@@ -283,7 +283,8 @@ figure {
 
 .wrapper {
    /* border: 1px solid red;*/
-    width: 1000px;
+    max-width: 1000px;
+    flex: 1;
     margin: 0 auto;
     display: inherit;
     justify-content: inherit;
@@ -330,4 +331,160 @@ figure {
 
 .icon.javascript{
     background-image: url(../images/JavaScript-logo.png);
+}
+@media screen and (max-width: 1024px){
+    .header{
+        justify-content: space-around;
+    }
+
+    .wrapper{
+        padding: 0 1em;
+    }
+
+    .hero {
+        padding: 2em;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+    }
+
+    h1 {
+        font-size: 2em;
+        z-index: 2;
+    }
+
+    .hero-image{
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+
+    }
+
+}
+
+@media screen and (max-width: 767px){
+
+    
+
+    .project {
+        display:block;
+
+    }
+
+    .project-imageContainer {
+        width: auto;
+        text-align: center;
+    }
+
+    .project-details {
+        width: auto;
+        
+    }
+
+    .project-course, .project-date, .project-url {
+        margin: .4em 0;
+    }
+
+    .project-title {
+        font-size: 1.5em;
+        margin-bottom: .3em;
+    }
+
+    .project-url {
+        font-size: 1em;
+
+    }
+
+    .project-course {
+        font-size: .7em;
+
+    }
+
+    .project-date {
+        font-size: 1em;
+
+    }
+
+    .project-description {
+        font-size: 1em;
+
+    }
+
+    .event {
+        width: auto;
+        flex-shrink: initial;
+    }
+
+    .event img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 479px){
+    h1 {
+        font-size: 1.5em;
+    }
+    .header {
+        display: block;
+        height: auto;
+    }
+    .header ul {
+        display: initial;
+    }
+
+    .header ul li {
+        height: 50px;
+    }
+    .header a {
+        justify-content: center;
+    }
+
+    .header .logo {
+        text-align: center;
+    }
+
+    .project-details {
+        width: auto;
+        font-size: 12px;
+    }
+
+    .event-detail {
+        margin: -2em .5em .5em .5em;
+        padding: 1em;
+    }
+
+    .contact {
+        height: auto;
+        padding: 1.5em 0;
+        text-align: center;
+        display: block;
+    }
+
+    .form-email button {
+        margin: 1em auto;
+    }
+
+    .form-email h3 {
+        margin-top: 0;
+    }
+
+    .footer {
+        display: block;
+        text-align: center;
+        border: 1px solid transparent;
+    }
+}
+
+@media screen and (max-width: 320px){
+h1 {
+    font-size: 1.2em;
+    background: rgba(0, 0, 0, .5);
+}
+.hero {
+    padding: 2em 1em;
+}
 }
