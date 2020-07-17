@@ -166,12 +166,8 @@ figure {
     color: white;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
-}
-
-.footer img {
-    vertical-align: middle;
 }
 
 .footer a {
@@ -182,12 +178,12 @@ figure {
     flex-wrap: wrap;
 }
 .event-list-title{
-    margin-left: 200px;
+    width: 100%;
+    margin-left: 1em;
 }
 .event {
-    border: 1px solid red;
-    margin: 10px;
-    width: 470px;
+    margin: 1%;
+    width: 48%;
     border-radius: 10px;
     overflow: hidden;
     flex-shrink: 0;
@@ -341,9 +337,39 @@ figure {
         justify-content: space-around;
     }
 
+    .wrapper{
+        padding: 0 1em;
+    }
+
+    .hero {
+        padding: 2em;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+    }
+
+    h1 {
+        font-size: 2em;
+        z-index: 2;
+    }
+
+    .hero-image{
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+
+    }
+
 }
 
 @media screen and (max-width: 767px){
+
+    
+
     .project {
         display:block;
 
@@ -387,9 +413,21 @@ figure {
         font-size: 1em;
 
     }
+
+    .event {
+        width: auto;
+        flex-shrink: initial;
+    }
+
+    .event img {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 479px){
+    h1 {
+        font-size: 1.5em;
+    }
     .header {
         display: block;
         height: auto;
@@ -413,8 +451,40 @@ figure {
         width: auto;
         font-size: 12px;
     }
+
+    .event-detail {
+        margin: -2em .5em .5em .5em;
+        padding: 1em;
+    }
+
+    .contact {
+        height: auto;
+        padding: 1.5em 0;
+        text-align: center;
+        display: block;
+    }
+
+    .form-email button {
+        margin: 1em auto;
+    }
+
+    .form-email h3 {
+        margin-top: 0;
+    }
+
+    .footer {
+        display: block;
+        text-align: center;
+        border: 1px solid transparent;
+    }
 }
 
 @media screen and (max-width: 320px){
-
+h1 {
+    font-size: 1.2em;
+    background: rgba(0, 0, 0, .5);
+}
+.hero {
+    padding: 2em 1em;
+}
 }
