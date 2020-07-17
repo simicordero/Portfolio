@@ -78,6 +78,8 @@ ul {
 
 .project-description{
     font-size: 20px;
+    text-align: justify;
+    padding-right: 2em;
 }
 
 .project strong {
@@ -206,7 +208,7 @@ figure {
 }
 
 .event-description{
-    text-align: left;
+    text-align: justify;
 }
 
 .event-url{
