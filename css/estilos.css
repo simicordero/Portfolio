@@ -311,6 +311,24 @@ figure {
     margin: 10px 15px;
 }
 
+.burger-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, .4);
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    display: none;
+    line-height: 40px;
+    text-align: center;
+    position: fixed;
+    z-index: 4;
+    left: .4em;
+    top: .4em;
+    color: white;
+}
+
 .icon.java{
     background-image: url(../images/java.svg);
 }
@@ -366,11 +384,14 @@ figure {
 
     }
 
+    .portfolio{
+        padding: 0;
+    }
+
 }
 
 @media screen and (max-width: 767px){
-
-    
+ 
 
     .project {
         display:block;
@@ -392,7 +413,7 @@ figure {
     }
 
     .project-title {
-        font-size: 1.5em;
+        font-size: 2em;
         margin-bottom: .3em;
     }
 
@@ -412,7 +433,7 @@ figure {
     }
 
     .project-description {
-        font-size: 1em;
+        font-size: 1.4em;
 
     }
 
@@ -424,9 +445,22 @@ figure {
     .event img {
         width: 100%;
     }
+
+    .event-description {
+        font-size: 1.1em;
+    }
+
+    .event-list-title {
+        margin-left: 0;
+    }
 }
 
 @media screen and (max-width: 479px){
+
+    .burger-button{
+        display: block;
+    }   
+
     h1 {
         font-size: 1.5em;
     }
@@ -443,10 +477,40 @@ figure {
     }
     .header a {
         justify-content: center;
+        height: 40px;
+        font-size: 2em;
+        text-decoration: underline;
+        margin-bottom: .5em;
     }
 
     .header .logo {
         text-align: center;
+    }
+
+   /*  .menu ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    } */
+
+    .menu {
+        position: fixed;
+        background: rgba(5, 111, 255, .8);
+        z-index: 3;
+        top: 0;
+        /* left: 0; */
+        width: 100vw;
+        /* height: 100vh; */
+        bottom: 0; /* Para que se centre el texto o tambien se puede utilizar height 100vh pero con display flex en el menu ul */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        left: -100vw; /* Para que el menu se oculte se utiliza en viewport de -100 y cree el efecto al hacer click */
+        transition: .3s; /* Para el efecto de transicion */
+    }
+
+    .menu.is-active {
+        left: 0;
     }
 
     .project-details {
@@ -490,3 +554,62 @@ h1 {
     padding: 2em 1em;
 }
 }
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('fonts/icomoon.eot?y7v6z1');
+    src:  url('fonts/icomoon.eot?y7v6z1#iefix') format('embedded-opentype'),
+      url('fonts/icomoon.ttf?y7v6z1') format('truetype'),
+      url('fonts/icomoon.woff?y7v6z1') format('woff'),
+      url('fonts/icomoon.svg?y7v6z1#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    /* line-height: 1; */
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-menu:before {
+    content: "\e900";
+  }
+  .icon-adobeillustrator:before {
+    content: "\e901";
+    color: #ff7c00;
+  }
+  .icon-css3:before {
+    content: "\e904";
+    color: #1572b6;
+  }
+  .icon-eclipseide:before {
+    content: "\e905";
+    color: #2c2255;
+  }
+  .icon-github:before {
+    content: "\e902";
+  }
+  .icon-html5:before {
+    content: "\e903";
+    color: #e34f26;
+  }
+  .icon-java:before {
+    content: "\e906";
+    color: #007396;
+  }
+  .icon-javascript:before {
+    content: "\e907";
+    color: #f7df1e;
+  }
+  

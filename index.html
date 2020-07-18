@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
+    <i class="burger-button icon-menu" id="burger-menu"></i>
     <header class="header">
         <div class="wrapper">
 
@@ -84,7 +85,7 @@
                 <h3 class="event-title">Redes de Computadora</h3>
                 <h3 class="event-title">Experiencia: 2 años</h3>
                 <p class="event-description">Las redes informáticas permiten que los ordenadores se conecten entre sí para intercambiar información y compartir hardware y software. Intercambiar información. El ordenador que suministra un servicio se denomina servidor, y el que solicita el servicio cliente.</p>
-                <a class="event-url" href="https://youtube.com/watch?v=BIS7cWgJg0" target="_blank">Ver platica</a>
+
             </div>
         </article>
     </section> 
@@ -106,7 +107,7 @@
             <a class="icon javascript" href="https://es.wikipedia.org/wiki/JavaScript">
             </a>
           </div>
-          Iconos diseñados por <a href="https://www.flaticon.es/autores/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.es/" title="Flaticon"> www.flaticon.es</a>
+
         </div>
       </section> 
     <section id="contacto" class="contact">
@@ -131,5 +132,36 @@
         </div>
     </div>
     </footer> 
+    <script>
+       console.log(window.matchMedia('screen and (max-width: 479px)'));
+        console.log(document.querySelector('.menu'));
+        console.log(document.querySelector('#burger-menu'));
+
+        const ipad = window.matchMedia('screen and (max-width: 767px)');
+        const menu = document.querySelector('.menu');
+        const burgerButton= document.querySelector('#burger-menu');
+        
+
+         burgerButton.addEventListener('click', hideShow); 
+
+        ipad.addListener(validation)
+
+        function validation(event) {
+            if (event.matches){
+                burgerButton.addEventListener('click', hideShow);
+            } else {
+                burgerButton.removeEventListener('click', hideShow);
+            }
+        }
+
+
+        function hideShow() {
+            if (menu.classList.contains('is-active')) {
+                menu.classList.remove('is-active');
+            } else {
+            menu.classList.add('is-active');
+            }
+        }
+    </script>
 </body>
 </html></Html:5>
