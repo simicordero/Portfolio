@@ -94,18 +94,19 @@
           <h2>Mis tecnologías</h2>
           <div class="tool-detail">
             <a
-            class="icon java" href="https://es.wikipedia.org/wiki/Java_(lenguaje_de_programaci%C3%B3n)">
+            class="icon-java" href="https://es.wikipedia.org/wiki/Java_(lenguaje_de_programaci%C3%B3n)">
             </a>
-            <a class="icon eclipseide" href="https://es.wikipedia.org/wiki/Eclipse_(software)">
+            <a class="icon-eclipseide" href="https://es.wikipedia.org/wiki/Eclipse_(software)">
             </a>
-            <a class="icon git" href="https://es.wikipedia.org/wiki/Git">
+            <a class="icon-github" href="https://es.wikipedia.org/wiki/Git">
             </a>
-            <a class="icon css3" href="https://es.wikipedia.org/wiki/Hoja_de_estilos_en_cascada">
+            <a class="icon-css3" href="https://es.wikipedia.org/wiki/Hoja_de_estilos_en_cascada">
             </a>
-            <a class="icon html5" href="https://es.wikipedia.org/wiki/HTML5">
+            <a class="icon-html5" href="https://es.wikipedia.org/wiki/HTML5">
             </a>
-            <a class="icon javascript" href="https://es.wikipedia.org/wiki/JavaScript">
+            <a class="icon-javascript" href="https://es.wikipedia.org/wiki/JavaScript">
             </a>
+            <a class="icon-adobeillustrator" href="https://es.wikipedia.org/wiki/adobeillustrator"></a>
           </div>
 
         </div>
@@ -142,7 +143,7 @@
         const burgerButton= document.querySelector('#burger-menu');
         
 
-         burgerButton.addEventListener('click', hideShow); 
+        burgerButton.addEventListener('click', hideShow);
 
         ipad.addListener(validation)
 
@@ -153,7 +154,6 @@
                 burgerButton.removeEventListener('click', hideShow);
             }
         }
-
 
         function hideShow() {
             if (menu.classList.contains('is-active')) {
